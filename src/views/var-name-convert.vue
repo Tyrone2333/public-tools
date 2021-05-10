@@ -1,25 +1,25 @@
 <template>
   <div class='var-name-convert'>
 
-      <p>msg: {{msg}}</p>
-      <div class='checkbox-item'>
-        <span>转换中划线: </span>
-        <input type='checkbox' v-model='transMiddleDash'>
-      </div>
-      <div class='checkbox-item'>
-        <span>转换空格: </span>
-        <input type='checkbox' v-model='transSpace'>
-      </div>
-      <hr>
-      <p>驼峰: {{underlineToHump(msg)}}</p>
-      <p>下划线: {{humpToUnderline(msg)}}</p>
-      <p>大写下划线: {{toCapitalUnderline(msg)}}</p>
-      <div class='child'>
-        <h4>需要转换的变量名</h4>
-        <input type='text' v-model='msg2' @input='handleInput'>
-        <!--<custom-input v-model:mv='msg' :transMiddleDash='transMiddleDash'></custom-input>-->
-        <!-- <custom-input :model-value="msg" @update:model-value="msg = $event"></custom-input> -->
-      </div>
+    <p>msg: {{ msg }}</p>
+    <div class='checkbox-item'>
+      <span>转换中划线: </span>
+      <input type='checkbox' v-model='transMiddleDash'>
+    </div>
+    <div class='checkbox-item'>
+      <span>转换空格: </span>
+      <input type='checkbox' v-model='transSpace'>
+    </div>
+    <hr>
+    <p>驼峰: {{ underlineToHump(msg) }}</p>
+    <p>下划线: {{ humpToUnderline(msg) }}</p>
+    <p>大写下划线: {{ toCapitalUnderline(msg) }}</p>
+    <div class='child'>
+      <h4>需要转换的变量名</h4>
+      <input type='text' v-model='msg2' @input='handleInput'>
+      <!--<custom-input v-model:mv='msg' :transMiddleDash='transMiddleDash'></custom-input>-->
+      <!-- <custom-input :model-value="msg" @update:model-value="msg = $event"></custom-input> -->
+    </div>
 
   </div>
 </template>
@@ -88,7 +88,7 @@ export default {
 }
 </script>
 
-<style scoped  >
+<style scoped>
 .var-name-convert {
 
 }
