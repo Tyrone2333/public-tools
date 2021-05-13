@@ -14,6 +14,8 @@
     <p>驼峰: {{ underlineToHump(msg) }}</p>
     <p>下划线: {{ humpToUnderline(msg) }}</p>
     <p>大写下划线: {{ toCapitalUnderline(msg) }}</p>
+    <p>中划线: {{humpToMiddleLine(msg)}}</p>
+
     <div class='child'>
       <h4>需要转换的变量名</h4>
       <input type='text' v-model='msg2' @input='handleInput'>
@@ -79,6 +81,10 @@ export default {
     // 驼峰转下划线
     humpToUnderline(str) {
       return str.replace(/([A-Z])/g, "_$1").toLowerCase()
+    },
+    // 驼峰转中划线
+    humpToMiddleLine(str) {
+      return str.replace(/([A-Z])/g, "-$1").toLowerCase()
     },
     // 大写
     toCapitalUnderline(str) {
